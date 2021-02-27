@@ -33,7 +33,7 @@ export class SheepController {
 
     }
 
-    draw(ctx, t, dots) {
+    draw(ctx, t, dots) { //양그리는 함수
         if (this.isLoaded) {
             this.cur += 1;
             if (this.cur > 200) {
