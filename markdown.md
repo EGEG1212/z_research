@@ -66,7 +66,7 @@ int main(){
 ``` sh #결과같은거
 hello
 ```
-### carbon.now.sh 에서 코드스샷가능한 툴
+### carbon.now.sh 코드스샷가능한 툴
 
 ---
 ### 레이택LaTex문법
