@@ -1,21 +1,23 @@
 ### download
 AutoHotKey
-(https://www.autohotkey.com/download/)
+<https://www.autohotkey.com/download/>
 
 ### Editor
 SciTE4AutoHotkey
-(https://fincs.ahk4.net/scite4ahk/)
+<https://fincs.ahk4.net/scite4ahk/>
 *Window spy 필수*
-...혹쉬.. notepad++을 쓴다면? 다운&설정참고 (https://www.youtube.com/watch?v=i-moTBJZ1nA)
+...혹쉬.. notepad++을 쓴다면? 다운&설정참고 <https://www.youtube.com/watch?v=i-moTBJZ1nA>
 
 #### Help 참고
-(https://www.autohotkey.com/docs/commands/MouseClick.htm)
+<https://www.autohotkey.com/docs/commands/MouseClick.htm>
 
 ### 코드변경시, 계속 재접속😫...
 `#y:: Reload` 
 😋첫줄에 꼭 넣자!!!
 
 ### Symbol의 의미
+| Symbol| 의미 |
+|:--:|:--:|
 | ^| Ctrl |
 | !| Alt |
 | +| Shift |
@@ -27,11 +29,11 @@ SciTE4AutoHotkey
 ## Run
 Hotkey(단축키) win+n키를 눌렀을때 프로그램 실행. /n
 환경변수설정이 되어있거나(notepad), 경로를 입력하지않으면.. /n
-환경변수설정을 해야한다. 시스템환경 변수 편집->path에 경로추가(https://www.youtube.com/watch?v=RaFHyu1plis&list=PL--lMTarQb9mUzNzxJ-fErRSdQUCXCmkf&index=13)25:25
+환경변수설정을 해야한다. 시스템환경 변수 편집->path에 경로추가<https://www.youtube.com/watch?v=RaFHyu1plis&list=PL--lMTarQb9mUzNzxJ-fErRSdQUCXCmkf&index=13>25:25
 ```
 #n::
 	Run Notepad
-    ;Run, www.naver.com, Max
+    ;Run, www.naver.com, Max ;Max|Min|Hide 택1
 	;Run, www.naver.com, ,Max
 	;Run, chrome.exe "www.naver.com" ;🙃띄어쓰기 꼭
 	Run, C:\Program Files (x86)\ipTIME\ipTIME NAS\Utility\ipTIME_ipDISK_Drive.exe
