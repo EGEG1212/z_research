@@ -18,13 +18,36 @@ MsgBox, %X%, %Y%
 `CoordMode, Mouse, Screen ;마우스동작기준`  <br>
 05)기본 활성화되어있는 창기준인데 전체로 바꾸고싶다면
 ```
-CoordMode, Pixel, Screen ;전체화면기준
+CoordMode, Pixel, Screen ;전체화면기준🧡
 CoordMode, Mouse, Screen
 ```
 
 나는 왜 아예 `msgbox, %errorlevel%`  메시지박스가 안뜨는거지?? 이게뭔일😨<br>
+🧡`F2::` 아래에 `msgbox` 넣고
+```F4::
+ExitApp
+ ```
+ 이건 맨아래두니까 그냥 Exit?!?!? 🧡맨위로 올리기
 
 06)듀얼모니터라서?<br>
 <https://www.youtube.com/watch?v=it-tCqGinZU> <br>
 나는 오른쪽이 주모니터 Screen (0,0) (1919,1079) <br>
-왼쪽모니터는 Screen(-1920, 0) (-1,1079)
+왼쪽모니터는 Screen(-1920, 0) (-1,1079) <br>
+ <br>
+😀😀😀
+```
+#y:: Reload
+F4::
+ExitApp
+ 
+F2::
+CoordMode, Pixel ;, Screen
+ImageSearch, X, Y, 0, 0, 1920, 1079, *100 image\jm4.bmp
+;ImageSearch, X, Y, 0, 0, A_ScreenWidth, A_ScreenHeight, *100 image\jm4.bmp
+;MsgBox, %ErrorLevel%
+MsgBox, %X%, %Y%
+```
+.bmp .png 모두 가능! 😀<br>
+같은 이미지인데도 왜 두번째 것만 가리키는걸까? `*50, *100, 삭제해도` <br>
+🤦‍♀️`*225`는 영 딴곳을 찍음.<br>
+ahk너..img차별하는고니?!?😨

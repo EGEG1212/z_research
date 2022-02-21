@@ -11,9 +11,23 @@ SciTE4AutoHotkey
 #### Help 참고
 <https://www.autohotkey.com/docs/commands/MouseClick.htm>
 
+### 🤩OCR문자인식 
+<https://ahkplant.tistory.com/354>
+
 ### 코드변경시, 계속 재접속😫...
-`#y:: Reload` 
-😋첫줄에 꼭 넣자!!!
+```
+F2:: 
+MsgBox, 재시작합니다.
+Reload
+
+F4::
+MsgBox, 종료합니다.
+ExitApp  
+```
+😋머릿글에 꼭 넣자!!!
+아예 첫문장을 입력해버린다!?<https://secretgd.tistory.com/212?category=713787>
+C: -> Window -> ShellNew -> Template.ahk 안에 입력하면<br>
+바탕화면에 마우스우클릭-> 새로만들기 -> AutoHotkey Script 🤩짜잔
 
 ### Symbol의 의미
 | Symbol| 의미 |
@@ -27,8 +41,8 @@ SciTE4AutoHotkey
 핫키를 잠시 막고싶을땐, Suspend
 
 ## Run
-Hotkey(단축키) win+n키를 눌렀을때 프로그램 실행. /n
-환경변수설정이 되어있거나(notepad), 경로를 입력하지않으면.. /n
+Hotkey(단축키) win+n키를 눌렀을때 프로그램 실행. <br>
+환경변수설정이 되어있거나(notepad), 경로를 입력하지않으면.. <br>
 환경변수설정을 해야한다. 시스템환경 변수 편집->path에 경로추가<https://www.youtube.com/watch?v=RaFHyu1plis&list=PL--lMTarQb9mUzNzxJ-fErRSdQUCXCmkf&index=13>25:25
 ```
 #n::
@@ -72,9 +86,9 @@ Click, %X%, %Y%
 ```
 
 ### 캡쳐: win + shift + s
-근데 저장위치는 어디?ㅋㅋ
-🎈캡쳐를 1/4정도로 떠야한다.
-이미지의 왼쪽위를 클릭하기 때문에..
+근데 저장위치는 어디?ㅋㅋ <br>
+🎈캡쳐를 1/4정도로 떠야한다. <br>
+이미지의 왼쪽위를 클릭하기 때문에.. <br>
 
 ### 윈도우말고 스크린영역으로 바꾸겠다.
 CoordMode, Pixel, Screen
@@ -93,8 +107,8 @@ F3::
 ImageSearch, X, Y, 251, 470, 835, 705, *100 test.png
 MsgBox, %ell
 ```
-0 : 이미지 찾음
-1 : 이미지 못 찾음
+0 : 이미지 찾음  <br>
+1 : 이미지 못 찾음 <br>
 2 : 기타 에러 발생
 
 ### macro 종료
@@ -124,7 +138,8 @@ F4::
 ExitApp
 ```
 
-### 반복문 loop, while, for
+### 반복문 loop, while, for... 또는 Goto
+<https://ahkplant.tistory.com/146>
 ```
 Loop { 
     ;무한반복
@@ -137,6 +152,17 @@ Loop,3 {
 return
 ```
 
+### 조건문 elif는 없다...
+```
+if (ErrorLevel = 2)
+			MsgBox Could not conduct the search.
+		else if (ErrorLevel = 1)
+			MsgBox Icon could not be found on the screen.
+		else
+			MsgBox The icon was found at %FoundX%x%FoundY%.
+```
+
+
 ### 영역내에서만 단축키활성화 '#IfWinActive'
 class명은 spy에서 확인
 ```
@@ -144,8 +170,8 @@ class명은 spy에서 확인
 	PgUp::A
 	#h::MsgBox good
 ```    
-PgUp키를 누르면 A가찍히고
-win+h키를 누르면 alert창에 good 팝업
+PgUp키를 누르면 A가찍히고  <br>
+win+h키를 누르면 alert창에 good 팝업  <br>
 이것들은 notepad내에서만 작동함.
 
 ## HotStrings(자동고침)
@@ -162,7 +188,7 @@ win+h키를 누르면 alert창에 good 팝업
 	sendinput %currentdatetime%
 return
 ```
-현재 시간 출력 
+현재 시간 출력   <br>
 2022/2/19 7:19 오후
 
 ## Remapping Keys
@@ -171,7 +197,7 @@ return
 q::b ;q키를 눌렀을 때, b가 입력됨
 LWin::return ; 왼win키를 눌렀을 때, 아무일도 일어나지않음. (먹통)
 ```
-전체 상태에서 리맵핑해버리면 불편한점이 은근 있으니..
+전체 상태에서 리맵핑해버리면 불편한점이 은근 있으니..  <br>
 `#IfWinActive`와 함께 쓰는게 좋겠다🙄
 
 ### 🎅미니플젝🎅윈도우 안에서의 insta 좋아요 클릭 -> 다음버튼 클릭
