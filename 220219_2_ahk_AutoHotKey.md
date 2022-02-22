@@ -139,7 +139,8 @@ ExitApp
 ```
 
 ### 반복문 loop, while, for... 또는 Goto
-<https://ahkplant.tistory.com/146>
+<https://ahkplant.tistory.com/146> <br>
+프날<https://pnal.kr/68>
 ```
 Loop { 
     ;무한반복

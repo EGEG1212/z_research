@@ -27,7 +27,7 @@ CoordMode, Mouse, Screen
 ```F4::
 ExitApp
  ```
- 이건 맨아래두니까 그냥 Exit?!?!? 🧡맨위로 올리기
+ 이건 맨아래두니까 그냥 Exit?!?!? 🧡맨위로 올리기<br>
 
 06)듀얼모니터라서?<br>
 <https://www.youtube.com/watch?v=it-tCqGinZU> <br>
@@ -50,4 +50,4 @@ MsgBox, %X%, %Y%
 .bmp .png 모두 가능! 😀<br>
 같은 이미지인데도 왜 두번째 것만 가리키는걸까? `*50, *100, 삭제해도` <br>
 🤦‍♀️`*225`는 영 딴곳을 찍음.<br>
-ahk너..img차별하는고니?!?😨
+ahk너..img차별하는고니?!?😨<br>
