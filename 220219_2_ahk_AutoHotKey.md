@@ -85,10 +85,12 @@ MouseMove, %X%, %Y%
 Click, %X%, %Y%
 ```
 
-### 캡쳐: win + shift + s
-근데 저장위치는 어디?ㅋㅋ <br>
-🎈캡쳐를 1/4정도로 떠야한다. <br>
-이미지의 왼쪽위를 클릭하기 때문에.. <br>
+### 캡쳐: 🎈 win + shift + s
+위치는 .ahk파일 아래 image/  <br>
+🎈캡쳐를 1/4정도로 떠야한다.(이미지의 왼쪽위를 클릭하기 때문) <br>
+작을수록 정확도가 좋다.<br>
+24비트 bmp 또는 png로 한다.<br>
+자세한건 mp1_CtrlG.md참조
 
 ### 윈도우말고 스크린영역으로 바꾸겠다.
 CoordMode, Pixel, Screen
