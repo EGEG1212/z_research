@@ -120,7 +120,8 @@ ExitApp
 ```
 ExitApp 윗 단에`return` 해줘야 흐르지 않음.
 
-### 이미지 찾으면 좌표출력, 못 찾으면 지정된 문구 출력
+### ImageSearch 이미지 찾으면 좌표출력, 못 찾으면 지정된 문구 출력
+*220220-mp1_CtrlG.md참조*
 ```
 F3::
 CoordMode, Pixel, Screen
@@ -200,6 +201,41 @@ LWin::return ; 왼win키를 눌렀을 때, 아무일도 일어나지않음. (먹
 ```
 전체 상태에서 리맵핑해버리면 불편한점이 은근 있으니..  <br>
 `#IfWinActive`와 함께 쓰는게 좋겠다🙄
+
+### scroll WheelUp, WheelDown ...응? SetTimer
+<https://www.autohotkey.com/boards/viewtopic.php?t=27522>
+또는 `send {PgDn}`
+
+### SetTimer 버튼같은느낌?
+
+
+### 함수 function
+위에있건 아래있건 상관없는듯.
+```
+gugudan(dan)
+{
+    a := 0
+    Loop, 9
+        result .= dan " x " A_Index " = " dan * A_Index "`n"
+    MsgBox, %result%
+    return
+}
+
+F3::
+gugudan(7)
+gugudan(8)
+gugudan(9)
+return
+```
+
+### space로 나눠서 출력
+```
+F3::
+var := "동해물과 백두산이 마르고 닳도록"
+Loop, Parse, var, %A_Space%
+    MsgBox, %A_LoopField%
+```
+
 
 ### 🎅미니플젝🎅윈도우 안에서의 insta 좋아요 클릭 -> 다음버튼 클릭
 ```
