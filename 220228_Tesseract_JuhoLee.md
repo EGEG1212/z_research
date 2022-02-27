@@ -1,8 +1,18 @@
 What is Tesseract?
 Tesseract is a free optical character recognition engine originally developed by HP which was later made open source and the development is now sponsored by Google
+👍
+<https://www.youtube.com/watch?v=AJkqqZukJuI&t=874s>
+CMD에서 설치위치로 갑니다. C:\Program Files\Tesseract-OCR <br>
+**tesseract "이미지경로\파일명까지" "저장경로\output" -l kor** <br>
+C:\Users\User\Desktop\ahk\CaptureKOR.png <br>
+C:\Users\User\Desktop\ahk\CaptureENG.png <br>
+C:\Users\User\Desktop\ahk\output <br>
+tesseract "C:\Users\User\Desktop\ahk\CaptureKOR.png" "C:\Users\User\Desktop\ahk\output" -l kor <br>
+😍-l kor 한글인식괜춘 (특수기호불가. 영어불가. 숫자가능. )
+넉->녁 / 굶->x
 
 --------------------------- Installation ---------------------------
-Go to https://github.com/UB-Mannheim/tesseract/wiki (works as of April 2021)
+Go to <https://github.com/UB-Mannheim/tesseract/wiki> (works as of April 2021)
 
 Download "tesseract-ocr-w64-setup-v5.0.0-alpha.20201127.exe (64 bit)" or any other newer version
 
@@ -14,21 +24,21 @@ When you want to install additional language and script models there are two opt
 A) Either you can start the installation again and choose the additional language and script models to install.
 B) Or, you can install them manually (see below)
 
-Choose the additional language and script models from e.g. one of the places linked from https://tesseract-ocr.github.io/tessdoc/Data-Files
+Choose the additional language and script models from e.g. one of the places linked from <https://tesseract-ocr.github.io/tessdoc/Data-Files>
 
 Download the traineddata file to the tessdata folder of tesseract on your PC, e.g. C:\Program Files\Tesseract-OCR\tessdata. It is also possible to create new subfolders within that folder to distinguish for example the best and fast models.
 
 Check that the new languages are recognized by
 
-source: https://github.com/UB-Mannheim/tesseract/wiki/Install-additional-language-and-script-models
+source:<https://github.com/UB-Mannheim/tesseract/wiki/Install-additional-language-and-script-models>
 
 
 --------------------------- How to Use Tesseract ---------------------------
 
-;User Manual available here: https://tesseract-ocr.github.io/
+;User Manual available here: <https://tesseract-ocr.github.io/>
 
 Run Tesseract in Cmd
-;example: https://www.lipsum.com/
+;example: <https://www.lipsum.com/>
 
 ;Syntax for English:
 tesseract InputFilename.ext outputName
