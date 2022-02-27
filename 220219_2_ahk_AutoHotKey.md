@@ -16,16 +16,17 @@ SciTE4AutoHotkey
 *주호의 OCR *
 <https://www.youtube.com/watch?v=WHmLYTYFZMo> <br>
 <https://juho-lee.com/tutorial> <br>
-#19-1 캡쳐된 이미지를 text인식 -> ...한국어에 대단히 실망😒 숫자도안됨😒<br>
+#19-1 캡쳐된 이미지를 text인식 -> ...한국어에 대단히 실망😒 숫자도안됨😒 단색일때잘되는듯!!🧐<br>
 #19-2 screen을 인식 ->필요없음<br>
 #19-3 shift+좌클릭드래그 영역인식 -> 여러전번숫자가능-가끔오류있음/한글안됨<br>
 #19-4 shift+좌클릭드래그 영역인식한부분을 영구적으로 툴팁에 인식결과 뜸. 새로운값들을 계속 인식. 변화를 볼 수 있음<br>
 #19-5 인풋박스에 단어를 넣으면 텍스트를 찾아줌 <br>
-😶vis2 라이브러리의 OCR기능이 tesseract이용.(자동차번호판인식 포폴용으로)한글인식률은 낮은데도 잘되는편이라고함
+😶vis2 라이브러리의 OCR기능이 tesseract이용.(자동차번호판인식 포폴용으로)한글인식률은 낮은데도 잘되는편이라고함<br>
+🤩렙토니카!!!!!! <https://www.youtube.com/watch?v=tly77o4RL5s&t=567s>
 
 
 ### 🤩GDIP
-<https://pnal.kr/pages/gdip2>
+<https://pnal.kr/pages/gdip7>
 
 ### 코드변경시, 계속 재접속😫...
 ```
