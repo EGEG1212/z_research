@@ -1,22 +1,9 @@
-영상 <https://www.youtube.com/watch?v=tly77o4RL5s&list=PLa9z1lCs1x9LzCOmfym4XEXG5VFE-Lu27&index=60> <br>
-스크립트 <https://juho-lee.com/archive> <br>
-#10 Run & Command Prompt] 파트 6 - 무설치 테서렉트 (Tesseract)와 렙토니카 (Leptonica)로 문자인식 (OCR) <br>
-<https://github.com/iseahound/Vis2> 여기에서 down-zip  <br>
-다필요한건아니고  bin/tesseract <br>
-<https://github.com/tesseract-ocr/tessdata_fast> 한국어 traineddata 다운받아서 bin/tesseract/testdata_fast에 넣기 <br>
-새폴더 생성 / bin 옮겨가기 <br>
-4:23 새폴더 안에 복분 Tesseract Script.ahk 생성 (Vis2.ahk에서 테서렉트class부분만 뽑아서 만든것) <br>
-5:00 New Script.ahk에작성 <br>
-#Include Tesseract Script.ahk  <br>
-Tesseract:= new Tesseract() <br>
-text := Tesseract.OCR("이미지파일의경로\파일명까지", "kor", "fast") ;en과 fast가 기본값 <br>
-msbox % text <br>
-7:13렙토니카의 프리프로세싱  <br>
- cleanup부분 주석처리 <br>
- fileProcessedImage  Temp 저장위치 <br>
-  <br>
+﻿;주호의오토핫키 : https://www.youtube.com/watch?v=tly77o4RL5s&list=PLa9z1lCs1x9LzCOmfym4XEXG5VFE-Lu27&index=60
+;주호의오토핫키 : https://juho-lee.com/archive
+;#10 Run & Command Prompt] 파트 6 - 무설치 테서렉트 (Tesseract)와 렙토니카 (Leptonica)로 문자인식 (OCR)
+
 ;originally from Vis2 (Vis2.ahk): https://www.autohotkey.com/boards/viewtopic.php?f=6&t=36047
-;github link: https://github.com/iseahound/Vis2
+;github link: https://github.com/iseahound/Vis2 👈DownloadZip. 다필요한건아니고 bin/tesseract
 ;the tesseract.exe file in this link is v4
 
 ;Preprocessing
@@ -27,8 +14,20 @@ msbox % text <br>
 
 ;for up to date traineddata and other languages
 ;https://tesseract-ocr.github.io/tessdoc/Data-Files
-;https://github.com/tesseract-ocr/tessdata_fast
+;https://github.com/tesseract-ocr/tessdata_fast 👈 kor한국어 traindata다운받아서 bin/tesseract/testdata_fast에 넣기
 ;https://github.com/tesseract-ocr/tessdata_best
+;👌새폴더 생성 / bin 옮겨가기
+;👌4:23 새폴더 안에 복분 Tesseract Script.ahk 생성 (Vis2.ahk에서 테서렉트class부분만 뽑아서 만든것)
+;👌5:00 New Script.ahk에작성
+/* 
+#Include Tesseract Script.ahk
+Tesseract:= new Tesseract()
+text := Tesseract.OCR("이미지파일의경로\파일명까지", "kor", "fast") ;en과 fast가 기본값
+msbox % text 
+*/
+;😎7:13렙토니카의 프리프로세싱
+;😎cleanup부분 주석처리
+;😎fileProcessedImage Temp 저장위치
 
 ;to use tesseract.exe outside of ahk script, simply save the traineddata file (e.g. eng.traineddata) in the same folder as tesseract.exe and pass a command such as the below in command in prompt
 ;"C:\Users\....\tesseract.exe" "C:\Users\juho2\Desktop\image.jpg" "C:\Users\juho2\Desktop\output"
