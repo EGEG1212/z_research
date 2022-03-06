@@ -23,7 +23,7 @@
 #Include Tesseract Script.ahk
 Tesseract:= new Tesseract()
 text := Tesseract.OCR("이미지파일의경로\파일명까지", "kor", "fast") ;en과 fast가 기본값
-msbox % text 
+msgbox % text 
 */
 ;😎7:13렙토니카의 프리프로세싱
 ;😎cleanup부분 주석처리
