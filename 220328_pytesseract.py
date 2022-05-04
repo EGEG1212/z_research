@@ -5,5 +5,7 @@ import pytesseract
 
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract'
 
-print(pytesseract.image_to_string(r'C:\Users\User\Desktop\ahk\Capture3.png', lang='kor+eng', config='-c preserve_interword_spaces=1 --psm 4'))
+print(pytesseract.image_to_string(r'C:\Users\User\Desktop\ahk\CaptureKOR.png', lang='kor+eng', config='-c preserve_interword_spaces=1 --psm 4'))
 
+# 18.30' CMD실행 19.8' 38초 소요😴
+# 19.20' exe실행 19.44' 24초 소요😴
