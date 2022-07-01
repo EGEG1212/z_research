@@ -7,7 +7,7 @@ CMD에서 설치위치로 갑니다. C:\Program Files\Tesseract-OCR <br>
 C:\Users\User\Desktop\ahk\CaptureKOR.png <br>
 C:\Users\User\Desktop\ahk\CaptureENG.png <br>
 C:\Users\User\Desktop\ahk\output <br>
-tesseract "C:\Users\User\Desktop\ahk\CaptureKOR.png" "C:\Users\User\Desktop\ahk\output" -l kor <br>
+tesseract "C:\Users\User\Desktop\ahk\CaptureKOR.png" "C:\Users\User\Desktop\ahk\output" -l kor+eng <br>
 😍-l kor 한글인식괜춘 (특수기호불가. 영어불가. 숫자가능. )
 넉->녁 / 굶->x
 
