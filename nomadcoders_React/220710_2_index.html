@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div id="root"></div>
+</body>
+<!-- https://reactjs.org/docs/cdn-links.html 에 있음😎-->
+<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<script>
+    const root = document.getElementById("root");
+    //const span = React.createElement("span", {id:"sexy-span", style: {color: "red"}}, "Hello I'm span");
+    //const h3 = React.createElement("h3", null, "Hello I'm span"); //🤩(태그, property가 null, 입력문구)
+    const h3 = React.createElement("h3", {id:"title", onMouseEnter: () => console.log("mouse enter")}, "Hello I'm span"); //😍property에 이벤트를넣어보자
+    //const btn = React.createElement("button", {onClick: () => console.log("im clicked")}, "Click me")
+    const btn = React.createElement("button", {onClick: () => console.log("im clicked"), style:{backgroundColor:"tomato"}}, "Click me")
+    const container = React.createElement("div", null, [h3, btn]);
+    ReactDOM.render(container, root)
+</script>
+</html>
+
+<!-- 😎createElement안쓰는방법은 다음장에 -->
