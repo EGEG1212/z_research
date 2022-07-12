@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div id="root"></div>
+</body>
+<!-- https://reactjs.org/docs/cdn-links.html 에 있음😎-->
+<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> <!--https://babeljs.io/docs/en/babel-standalone#installation-->
+<script type="text/babel">
+    const root = document.getElementById("root");
+    let counter = 0;
+    function countUp() {
+        counter += 1;
+        render();
+    }
+    function render() {
+        ReactDOM.render(<Container />, root);
+    }
+    function Container() {
+        return (
+        <div> 
+            <h3>Total clicks: {counter}</h3> 
+            <button onClick={countUp}>Click me</button> 
+        </div>
+        );
+    }
+        render();
+    //ReactDOM.render(<Container />, root);  //🤔리로드하지않는 단점이있다.. 아예 render함수만들어드림. 매번 끝마다 렌더링하는걸 잊지않아야 하기 때문에 좋은방법은 아니다~~
+</script> 
+</html>

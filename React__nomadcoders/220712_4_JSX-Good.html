@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div id="root"></div>
+</body>
+<!-- https://reactjs.org/docs/cdn-links.html 에 있음😎-->
+<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> <!--https://babeljs.io/docs/en/babel-standalone#installation-->
+<script type="text/babel">
+    const root = document.getElementById("root");
+    let counter = 0;
+    function countUp() {
+        counter += 1;
+        render();
+    }
+    function render() {
+        ReactDOM.render(<App />, root);
+    }
+    function App() {
+        const data = React.useState(777); //여기한줄추가 [초기값, f함수]
+        console.log(data);
+        return (
+        <div> 
+            <h3>Total clicks: {data[0]}</h3> 
+            <button onClick={countUp}>Click me</button> 
+        </div>
+        );
+    }
+        render();
+</script> 
+</html>
