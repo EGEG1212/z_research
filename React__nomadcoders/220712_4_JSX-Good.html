@@ -8,25 +8,21 @@
 <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> <!--https://babeljs.io/docs/en/babel-standalone#installation-->
 <script type="text/babel">
-    const root = document.getElementById("root");
-    let counter = 0;
-    function countUp() {
-        counter += 1;
-        render();
-    }
-    function render() {
-        ReactDOM.render(<App />, root);
-    }
     function App() {
-        const data = React.useState(777); //여기한줄추가 [초기값, f함수]
-        console.log(data);
+        const [counter, setCounter] = React.useState(0); //여기한줄추가 [초기값, f함수]
+        const onClick = () => {
+        //    serCounter(counter + 1);
+            setCounter((current) => current +1); //윗줄과 같은기능이지만. 직접값을전달하는것보다 이것(함수전달)이 더 안전😌 확실히 현재값이라는 뜻!
+        };
         return (
         <div> 
-            <h3>Total clicks: {data[0]}</h3> 
-            <button onClick={countUp}>Click me</button> 
+            <h3>Total clicks: {counter}</h3> 
+            <button onClick={onClick}>Click me</button> 
         </div>
         );
     }
-        render();
+    const root = document.getElementById("root");
+    ReactDOM.render(<App />, root);
+   
 </script> 
 </html>
