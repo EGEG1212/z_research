@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div id="root"></div>
+</body>
+<!-- https://reactjs.org/docs/cdn-links.html 에 있음😎-->
+<script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> <!--https://babeljs.io/docs/en/babel-standalone#installation-->
+<script type="text/babel">
+    function Btn({ text, fontSize=10 }){
+        //(props.text, props.fontsize)와 같은 뜻! 중괄호추가하고 필요한것만 쏙쏙
+        //JS문뻡으로 fontSize=10 처럼 기본값설정가능 
+        console.log(text, "렌더링되었습니다.");
+        return (
+        <button 
+            style={{
+                backgroundColor: "tomato",
+                color:"white",
+                padding:"10px, 20px",
+                border: 0,
+                borderRadius: 10,
+                fontSize,
+        }}>{text}</button>
+        );
+    }
+    //위에 src추가,변경하고 여기에서 타입설정(string외에도많다~) : 에러가나는건아니고 경고문구만 콘솔에뜰뿐!
+    //완전필수조건은 .isRequired
+    Btn.propTypes = {
+        text: PropTypes.string,
+        fontSize: PropTypes.number.isRequired,
+    }
+    function App() {
+        return (
+            <div>
+                <Btn text="Save Changes" fontSize={20} />
+                <Btn text={"Continue"}/>
+            </div>
+        );
+        
+    }
+    const root = document.getElementById("root");
+    ReactDOM.render(<App />, root);
+</script> 
+</html>

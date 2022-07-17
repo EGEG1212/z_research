@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div id="root"></div>
+</body>
+<!-- https://reactjs.org/docs/cdn-links.html 에 있음😎-->
+<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> <!--https://babeljs.io/docs/en/babel-standalone#installation-->
+<script type="text/babel">
+    function Btn({ text, onClick }){
+        console.log(text, "렌더링되었습니다.");
+        return (
+        <button 
+            onClick={onClick}
+            style={{
+                backgroundColor: "tomato",
+                color:"white",
+                padding:"10px, 20px",
+                border: 0,
+                borderRadius: 10,
+        }}>{text}</button>
+        );
+    }
+    //재사용성이 좋은 리액트에서 state가 변경될 때마다 rendering한다면 속도가 느려질 수 있다.
+    //이런 문제를 방지하는것이 React.memo()
+    const MemorizedBtn = React.memo(Btn) 
+    //변한것만 렌더링하게되어 속도개선시킬수있음!.App밖에서사용
+    function App() {
+        const [value, setValue] = React.useState("Save Changes");
+        const changeValue = () => setValue("Revert Changes");
+        return (
+            <div>
+                <MemorizedBtn text={value} onClick={changeValue} />
+                <MemorizedBtn text="Continue" />
+            </div>
+        );
+        
+    }
+    const root = document.getElementById("root");
+    ReactDOM.render(<App />, root);
+</script> 
+</html>
+ <!--input값 value={minutes}가 state라 UI에보여주는것이며, 스스로 업데이트한다 onChange함수덕분에-->
+ <!-- state의 default값은  React.useState() 여기에서 설정가능 -->
